@@ -153,18 +153,18 @@ def example_usage():
             print(row)
         print()
 
-    # Próbujemy znaleźć kombinację liniową o rank <= 1
+    # Próbujemy znaleźć kombinację liniową o rzędzie <= r
     result = brute_force_min_rank(matrices, max_rank=r)
     if result is not None:
         coeffs, comb_matrix = result
-        print("Znaleziono współczynniki dające rząd <= ",+str(r))
-        print("Współczynniki:", coeffs)
+        print("Znaleziono współczynniki dające rząd <= "+str(r))
+        print("Współczynniki:", coeffs,"\n")
         print("Kombinacja liniowa (macierz wynikowa):")
         for row in comb_matrix:
             print(row)
         print(f"Rząd = {gf2_rank(comb_matrix)}")
     else:
-        print("Nie znaleziono żadnej kombinacji o rzędzie <= ",+str(r))
+        print("Nie znaleziono żadnej kombinacji o rzędzie <= "+str(r))
 
 
 if __name__ == "__main__":
