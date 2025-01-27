@@ -1,0 +1,35 @@
+\begin{document}
+\subsection{Dokumentacja kodu}
+\subsubsection{Opis funkcjonalności kodu}
+Główne funkcjonalności kodu obejmują:
+\begin{itemize}
+    \item Obliczanie rzędu macierzy nad ciałem GF(2) z użyciem algorytmu Gaussa-Jordana (\texttt{gf2\_rank}).
+    \item Tworzenie losowych macierzy nad GF(2) (\texttt{generate\_random\_matrix\_gf2}).
+    \item Dodawanie i mnożenie macierzy przez skalary nad GF(2) (\texttt{add\_matrices\_gf2}, \texttt{scalar\_mult\_matrix\_gf2}).
+    \item Obliczanie kombinacji liniowych macierzy nad GF(2) (\texttt{linear\_combination\_gf2}).
+    \item Przeprowadzanie ataku typu MinRank przy użyciu metody brute force (\texttt{brute\_force\_min\_rank}).
+\end{itemize}
+
+\subsubsection{Parametryzacja kodu}
+Parametry kodu mogą być zmieniane w funkcji \texttt{example\_usage}, która ilustruje sposób użycia głównych funkcji:
+\begin{itemize}
+    \item \texttt{k} - liczba macierzy wejściowych.
+    \item \texttt{n}, \texttt{m} - liczba wierszy i kolumn macierzy.
+    \item \texttt{r} - maksymalny rząd, dla którego kod szuka kombinacji liniowych macierzy (\texttt{max\_rank}).
+\end{itemize}
+
+Zmiana tych parametrów pozwala użytkownikowi kontrolować wielkość danych wejściowych oraz granicę poszukiwań rzędu w ataku MinRank.
+
+\subsubsection{Wynik działania kodu}
+Wynikiem działania kodu jest:
+\begin{itemize}
+    \item Lista współczynników kombinacji liniowej, które prowadzą do macierzy o rzędzie mniejszym bądź równym \texttt{max\_rank}.
+    \item Wynikowa macierz będąca kombinacją liniową z obliczonym rzędem.
+\end{itemize}
+
+\subsubsection{Wyniki}
+\begin{itemize}
+    \item Jeśli atak się powiedzie, zostaną wypisane współczynniki kombinacji liniowej oraz wynikowa macierz.
+    \item Jeśli atak się nie powiedzie, program poinformuje, że nie znaleziono żadnej kombinacji spełniającej warunek rzędu.
+\end{itemize}
+\end{document}
